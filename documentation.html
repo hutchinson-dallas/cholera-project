@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Documentation + Video</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+<div class="grid-container">
+    <div class="side-nav">
+        <ul>
+            <li><p><a href="index.html">Interactive Map</a> </p></li>
+            <li><p><a href="documentation.html">Documentation + Video</a> </p></li>
+        </ul>
+    </div>
+    <div class="header">
+    </div>
+    <div class="main">
+        <div>
+            <div>
+                <h2>My Design Process</h2>
+                <p><br>The first step I took in this project was testing out basic d3 functions and experimenting with the data we were given. A basic understanding
+                of the data features and what each row in the files represented gave me a good idea what sort of visuals might be useful. After that I started to sketch out
+                what my first design would be. I have experience in creating R Shiny dashboards so I looked to documentation and examples of Shiny apps people built for
+                inspiration. Below is my first sketch and outline of my dashboard style visualization.</p>
+                <center>
+                <img class="rotate_image" src="design2.jpg" height="300" width="200"/>
+                </center>
+                <p>It has the basic dashboard elements of a header bar and sidebar navigation on the left with different links to alternate pages. I initially thought to have
+                the map of London visual take up the majority of the "main" page chunk. Then on the right would be visuals such as the deaths over time, summary statistics, 
+                etc. After testing out this design theory with d3 elements, the page seemed squished and lacked the simplistic approach I wanted to take. This led to the next
+                iteration of my dashboard.</p>
+                <center>
+                <img class="rotate_image" src="design1.jpg" height="300" width="200"/>
+                </center>
+                <p>This iteration was a much more simple look where each visual had enough space. This was done to ensure the end user was not overwhelmed and would then be
+                able to more easily interpret the visuals/graphs present. After settling on this dashboard design, I got to work on setting up the grid system, formatting CSS,
+                and declaring SVGs.</p>
+            </div>
+            <div>
+                <h2><br>My Design Choices</h2>
+                <p><br>&emsp;All of my design choices were considered with the user experience in mind. I tried to make text clear, contrast sharp, and colors purposeful.
+                I also used the color brewer online tool to find good color combinations and test for color blindness contexts. For general dashboard design, the background colors
+                for the header, sidebar, and main sections were chosen from well-known R Shiny examples. Links on the left have a hover color so the user knows it is clickable. I 
+                also added a project title and my name into the header. The grid-like structure of the main section was chosen to give the bottom two visuals more vertical
+                space since I knew they were going to be more space-heavy and prominent ones. I also added shadows to the grids for general aesthetics and gives the sense of
+                depth. Lastly, I wanted to add tooltips to all visuals because they give the user more interactivity as well as information to consume with the option to not have
+                that info take up as much space. Tooltips were also designed to be clear and contrast against the white background. <br>
+
+                &emsp;For the <b>deaths by age group</b> plot, I used a single darker shade color for the bars since there would be only one variable plotted among the six
+                groups (deaths). To gather this data for this graph, I created a new .csv file using Excel functions to group by age and sum the deaths by group. The x-axis label
+                shows the age category and the y-axis shows number of deaths. The tooltip functionality shows the exact number of deaths for the hovered group and allows to
+                restrict y-axis labels. <br>
+                
+                &emsp;For the <b>deaths by gender</b> plot, a similar approach was taken from the age group plot. This time however, I chose differing colors for males and females
+                to not only differentiate the groups but those colors also match up with the male/female representations on the map of London. This allows the users to easily see
+                gender differences in deaths and see how it matches up with the interactive map. Again, tooltips show number of deaths.<br>
+
+                &emsp;For the <b>map of London</b> graph, I used black clear lines to sketch the map design as well as major street names. This looked best against the white
+                background. Male and female deaths are encoded with the same colors as before. Pumps are encoded as black and shown relatively. The locations for the brewery and
+                the work house are also shown and each have their own color to differentiate each. Tooltips were added for all death dots and pumps/location dots so it is easy to
+                decipher what is what. I did attempt to add zoom functionality to the map but it doesn't work 100% as intended and users may need to refresh page to reset 
+                the map. <br>
+
+                &emsp;For the <b>timeline</b> graph, I again used a single solid color for the bars representing deaths by day. The same color from the age group chart was used
+                to make it easier on the eyes. Tooltips were used again to show deaths for the hovered day of choice. 
+                </p>
+            </div>
+            <div>
+                <h2><br>Findings</h2>
+                <p><br>Designing and curating the visuals really makes the user analyze the data and potentially uncover insights. Below are a few of the significant results of
+                the whole project.</p>
+                <ul>
+                    <li>The most affected groups of individuals by Cholera were the youngest and the oldest (0-10 and >80). The distribution here was surprising considering
+                        all age groups have to consume or drink water.</li>
+                    <li>There is an almost 50/50 split of females and males affected by the outbreak. This suggests males are just as likely as females to use the pumps
+                        and potentially catch the disease.</li>
+                    <li>The sharp slope of the timeline distribution and the right-tailed skew is also interesting to note. Cholera only takes hours or a couple days to 
+                        affect/kill the individual so what we are seeing here is the quick epidemiological turnaround of the particular disease.</li>
+                    <li>The concentration of deaths around Broad Street pump is something John Snow noticed and can be clearly seen from the map. There is also what seems
+                        like a small divide between males and females from east and west of the pump, which may have something to do with the two locations of importance.</li>
+                </ul>
+            </div>
+            <div>
+                <h2><br>Video</h2>
+                <p><iframe id="kaltura_player" src="https://cdnapisec.kaltura.com/p/1751071/sp/175107100/embedIframeJs/uiconf_id/26683571/partner_id/1751071?iframeembed=true&playerId=kaltura_player&entry_id=1_wf6focu2&flashvars[streamerType]=auto&amp;flashvars[localizationCode]=en&amp;flashvars[leadWithHTML5]=true&amp;flashvars[sideBarContainer.plugin]=true&amp;flashvars[sideBarContainer.position]=left&amp;flashvars[sideBarContainer.clickToClose]=true&amp;flashvars[chapters.plugin]=true&amp;flashvars[chapters.layout]=vertical&amp;flashvars[chapters.thumbnailRotator]=false&amp;flashvars[streamSelector.plugin]=true&amp;flashvars[EmbedPlayer.SpinnerTarget]=videoHolder&amp;flashvars[dualScreen.plugin]=true&amp;flashvars[Kaltura.addCrossoriginToIframe]=true&amp;&wid=1_503igra6" width="400" height="285" allowfullscreen webkitallowfullscreen mozAllowFullScreen allow="autoplay *; fullscreen *; encrypted-media *" sandbox="allow-downloads allow-forms allow-same-origin allow-scripts allow-top-navigation allow-pointer-lock allow-popups allow-modals allow-orientation-lock allow-popups-to-escape-sandbox allow-presentation allow-top-navigation-by-user-activation" frameborder="0" title="Cholera Project Video"></iframe></p>
+            </div>
+            <div>
+                <h2><br>References</h2>
+                <p>
+                    https://d3-graph-gallery.com/index.html <br>
+                    https://www.w3schools.com/css/css_grid.asp <br>
+                    https://github.com/d3/d3-time-format <br>
+                    https://bl.ocks.org/tpham27/37d682cc63fc29da314c6d28417fce3f <br>
+                    https://www.w3schools.com/html/ <br>
+                    geeksforgeeks.org <br>
+                    stackoverflow.com
+                </p>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
